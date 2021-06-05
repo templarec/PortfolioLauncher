@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous"/>
+    <!-- JQuery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous"></script>
+    <!-- Google fonts cdn -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- My custom style -->
+    <link rel="stylesheet" href="./assets/css/master.css">
+
+    <meta charset="UTF-8">
+    <title>portfolio-crt</title>
+</head>
+<body>
+<!-- the actual device -->
+    <div id="monitor">
+        <!-- the rounded edge near the glass -->
+        <div id="bezel">
+            <!-- the overlay and horizontal pattern -->
+            <div id="crt" class="off" >
+                <!-- slowly moving scanline -->
+
+                <div class="scanline"></div>
+                <!-- the input and output -->
+
+                <div class="terminal">
+                    <h2 class="heading">Lorenzos' Portfolio Launcher 1.0</h2>
+                    <code v-if="!avvio">Premi invio per cominciare</code>
+                    <h2 id="titolo"></h2>
+                    <div id="output"></div>
+
+                    <span id="input">{{typing}}</span>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+<!-- axios -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+<!-- Vue cdn development -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<!-- My custom JS script -->
+
+<script src="./assets/js/main.js"></script>
+
+</body>
+<!-- portfolio-crt - 04/06/21
+ Author: lorenzobernini -->
+</html>
