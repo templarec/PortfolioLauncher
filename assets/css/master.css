@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata&family=VT323&display=swap);
+@charset "UTF-8";
 * {
   font-family: "VT323", monospace;
   padding: 0;
@@ -331,4 +332,60 @@ body, #monitor, #bezel, #crt {
 
 #titolo .lory {
   color: orangered;
+}
+
+.sorry {
+  display: none;
+}
+
+@media all and (min-width: 1180px) and (max-width: 1300px) {
+  #monitor, .terminal, #bezel {
+    width: 100%;
+  }
+}
+@media all and (max-width: 1180px) {
+  #monitor, #bezel {
+    width: 98%;
+  }
+
+  code {
+    display: none;
+  }
+
+  .terminal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #titolo, #output, .heading {
+    font-size: 40px;
+  }
+
+  #titolo:before {
+    content: "Il tuo device è troppo evoluto per questo sito!";
+  }
+
+  #output:before {
+    content: "Prova a visualizzarlo su un pc!";
+  }
+
+  #input {
+    display: none;
+  }
+}
+@media all and (max-width: 1020px) {
+  #titolo, #output, .heading {
+    font-size: 30px;
+  }
+}
+@media all and (max-width: 770px) {
+  #titolo, #output, .heading {
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 520px) {
+  #titolo, #output, .heading {
+    font-size: 16px;
+  }
 }
