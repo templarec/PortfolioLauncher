@@ -23,10 +23,14 @@ var app = new Vue({
             "<span class='commands'>INFO</span> - Informazioni generali",
             "<span class='commands'>PORTFOLIO</span> - I miei lavori",
             "<span class='commands'>CONTATTI</span> - Come contattarmi",
+            "<span class='commands'>SKILLS</span> - Le mie Hard Skills",
             "<span class='commands'>HELP</span>- Questo comando :)",
             "end transmission"
         ],
-        cat:[]
+        skills:[
+            "html5", "Css3", "Bootstrap", "Scss", "Javascript", "npm",
+            "Vue.js", "Php", "Mysql", "Laravel"
+        ]
     },
 
     mounted() {
@@ -46,7 +50,7 @@ var app = new Vue({
     computed: {},
     methods: {
         boot: function () {
-            this.typer("#titolo", ["Benvenuto nel Portfolio di <span class='lory'>Lorenzo Bernini</span>!", "Digita: INFO, PORTFOLIO, CONTATTI o HELP"], true)
+            this.typer("#titolo", ["Benvenuto nel Portfolio di <span class='lory'>Lorenzo Bernini</span>!", "Digita: INFO, PORTFOLIO, CONTATTI, SKILLS o HELP"], true)
         },
         typer: function (elemento, string, html) {
             new TypeIt(elemento, {
@@ -84,7 +88,7 @@ var app = new Vue({
                 case "PORTFOLIO":
                     this.purgeOutput();
                     this.avvio = true;
-                    console.log("portfolio");
+                    this.typer('#output',"Coming soon!", true)
                     break
                 case "CONTATTI":
                     this.purgeOutput();
@@ -109,12 +113,11 @@ var app = new Vue({
                     this.avvio = true;
                     document.getElementById('titolo').innerHTML = '';
                     break
-                case "CAT":
+                case "SKILLS":
                     this.purgeOutput();
                     this.avvio = true;
-                    this.readOut(8000)
-                    document.getElementById('output').style.textAlign = 'center';
-                    this.typec('#output',this.cat, true, 1)
+                    this.readOut(12000)
+                    this.typec('#output',this.skills, true, 75)
                     break
                 default:
                     this.purgeOutput();
