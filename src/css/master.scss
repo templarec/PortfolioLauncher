@@ -226,13 +226,11 @@ body, #monitor, #bezel, #crt {
 }
 #titolo {
   .lory {
-    color: orangered;
+    color: orange;
 
   }
 }
-.sorry {
-  display: none;
-}
+
 .propic-img {
   position: absolute;
   left: 350px;
@@ -264,6 +262,9 @@ body, #monitor, #bezel, #crt {
     display: block;
   }
 }
+#sorry {
+  display: none;
+}
 @keyframes immagine {
   0% {opacity: 0}
   100% {opacity: 1}
@@ -286,33 +287,29 @@ body, #monitor, #bezel, #crt {
     align-items: center;
   }
 
-#titolo, #output, .heading {
+#sorry h2, .heading {
   font-size: 40px;
 }
-  #titolo:before {
-
-    content: "Il tuo device è troppo evoluto!";
+  #sorry {
+    display: inline-block;
   }
-  #output:before {
 
-    content: "Prova a visualizzarlo su un pc!";
-  }
   #input  {
     display: none;
   }
 }
 @media all and (max-width: 1020px){
-  #titolo, #output, .heading {
+  #sorry h2, .heading {
     font-size: 30px;
   }
 }
 @media all and (max-width: 770px){
-  #titolo, #output, .heading {
+  #sorry h2, .heading {
     font-size: 20px;
   }
 }
 @media all and (max-width: 520px){
-  #titolo, #output, .heading {
+  #sorry h2, .heading {
     font-size: 16px;
   }
 }

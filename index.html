@@ -32,9 +32,13 @@
                 <!-- the input and output -->
 
                 <div class="terminal">
-                    <h2 class="heading">Lorenzo's Portfolio Launcher 1.7</h2>
+                    <h2 class="heading">Lorenzo's Portfolio Launcher 1.73</h2>
                     <code v-if="!avvio">Premi invio per cominciare</code>
                     <h2 id="titolo"></h2>
+                    <div id="sorry">
+                        <h2>Il tuo device è troppo evoluto!</h2>
+                        <h2> Prova a visualizzarlo su un pc! </h2>
+                    </div>
                     <div id="output"></div>
                     <div v-if="propic" class="propic-img">
                         <img src="./assets/img/lorypix.png" alt="lory pix" id="pix">
@@ -49,10 +53,7 @@
         </div>
 
     </div>
-<div class="sorry">
-    <p>Il tuo device è troppo evoluto per questo sito!</p>
-    <p>Prova a visualizzarlo su un pc!</p>
-</div>
+
 
 <!-- axios -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
