@@ -251,14 +251,13 @@ body, #monitor, #bezel, #crt {
   padding: 100px 50px;
   z-index: 3;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .terminal .heading {
   color: green;
   font-style: italic;
   margin-bottom: 30px;
-}
-.terminal code {
-  margin-top: 20px;
 }
 
 @-webkit-keyframes cursor {
@@ -303,6 +302,9 @@ body, #monitor, #bezel, #crt {
 #output {
   padding-top: 50px;
   padding-bottom: 30px;
+  position: absolute;
+  left: 50px;
+  top: 250px;
 }
 #output .errore {
   font-size: 34px;
@@ -338,6 +340,60 @@ body, #monitor, #bezel, #crt {
   display: none;
 }
 
+.propic-img {
+  position: absolute;
+  left: 350px;
+  top: 310px;
+  width: 250px;
+  height: 250px;
+  -webkit-animation-name: immagine;
+          animation-name: immagine;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.propic-img img {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  opacity: 50%;
+}
+.propic-img #pix {
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
+}
+.propic-img #normal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.propic-img:hover #pix {
+  display: none;
+}
+.propic-img:hover #normal {
+  display: block;
+}
+
+@-webkit-keyframes immagine {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes immagine {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media all and (min-width: 1180px) and (max-width: 1300px) {
   #monitor, .terminal, #bezel {
     width: 100%;

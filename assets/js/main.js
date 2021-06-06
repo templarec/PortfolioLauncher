@@ -14,6 +14,7 @@ var app = new Vue({
             "end transmission"
         ],
         contacts: [
+            "<a href='mailto:templarec@gmail.com' title='GitHub'>E-Mail</a>",
             "<a href='https://github.com/templarec' title='GitHub'>Github</a>",
             "<a href='https://www.linkedin.com/in/templarec/' title='Linked In'>Linkedin</a>",
             "end transmission"
@@ -30,7 +31,8 @@ var app = new Vue({
         skills:[
             "html5", "Css3", "Bootstrap", "Scss", "Javascript", "npm",
             "Vue.js", "Php", "Mysql", "Laravel"
-        ]
+        ],
+        propic: false
     },
 
     mounted() {
@@ -83,43 +85,51 @@ var app = new Vue({
                     this.purgeOutput();
                     this.avvio = true;
                     this.readOut(12000)
+                    this.propic = true
                     this.typer('#output',this.info, false)
                     break
                 case "PORTFOLIO":
+                    this.propic = false
                     this.purgeOutput();
                     this.avvio = true;
                     this.typer('#output',"Coming soon!", true)
                     break
                 case "CONTATTI":
+                    this.propic = false
                     this.purgeOutput();
                     this.avvio = true;
-                    this.readOut(2000)
+                    this.readOut(3000)
                     this.typer('#output',this.contacts, true)
                     break
                 case "":
+                    this.propic = false
                     this.purgeOutput();
                     this.avvio = true;
                     this.readOut(6000)
                     this.boot()
                     break
                 case "HELP":
+                    this.propic = false
                     this.purgeOutput();
                     this.avvio = true;
                     this.readOut(8000)
                     this.typer('#output',this.aiuto, true)
                     break
                 case "CLEAR":
+                    this.propic = false
                     this.purgeOutput();
                     this.avvio = true;
                     document.getElementById('titolo').innerHTML = '';
                     break
                 case "SKILLS":
+                    this.propic = false
                     this.purgeOutput();
                     this.avvio = true;
                     this.readOut(12000)
                     this.typec('#output',this.skills, true, 75)
                     break
                 default:
+                    this.propic = false
                     this.purgeOutput();
                     this.errorSound();
                     this.typer('#output',this.errore, true)

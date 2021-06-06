@@ -32,10 +32,14 @@
                 <!-- the input and output -->
 
                 <div class="terminal">
-                    <h2 class="heading">Lorenzo's Portfolio Launcher 1.5</h2>
+                    <h2 class="heading">Lorenzo's Portfolio Launcher 1.7</h2>
                     <code v-if="!avvio">Premi invio per cominciare</code>
                     <h2 id="titolo"></h2>
                     <div id="output"></div>
+                    <div v-if="propic" class="propic-img">
+                        <img src="./assets/img/lorypix.png" alt="lory pix" id="pix">
+                        <img src="./assets/img/lory.jpg" alt="lory" id="normal">
+                    </div>
 
                     <span id="input">{{typing}}</span>
 

@@ -157,7 +157,6 @@ body, #monitor, #bezel, #crt {
 }
 
 .terminal {
-
   font-family: "VT323", monospace;
   font-size: 25px;
   text-transform: uppercase;
@@ -166,16 +165,14 @@ body, #monitor, #bezel, #crt {
   padding: 100px 50px;
   z-index: 3;
   position: relative;
+  display: flex;
+  flex-direction: column;
   .heading {
     color: green;
     font-style: italic;
     margin-bottom: 30px;
   }
-  code {
-    margin-top: 20px;
-  }
 }
-
 @keyframes cursor {
   0% {
     opacity: 1;
@@ -202,7 +199,9 @@ body, #monitor, #bezel, #crt {
 #output {
   padding-top: 50px;
   padding-bottom: 30px;
-
+  position: absolute;
+  left: 50px;
+  top: 250px;
   .errore {
     font-size: 34px;
     color: red;
@@ -234,6 +233,41 @@ body, #monitor, #bezel, #crt {
 .sorry {
   display: none;
 }
+.propic-img {
+  position: absolute;
+  left: 350px;
+  top: 310px;
+  width: 250px;
+  height: 250px;
+  animation-name: immagine;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    opacity: 50%;
+  }
+  #pix {
+    image-rendering: pixelated;
+  }
+  #normal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &:hover #pix {
+    display: none;
+  }
+  &:hover #normal {
+    display: block;
+  }
+}
+@keyframes immagine {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
 @media all and (min-width: 1180px) and (max-width: 1300px){
    #monitor, .terminal, #bezel {
     width: 100%;
@@ -250,8 +284,8 @@ body, #monitor, #bezel, #crt {
     display: flex;
     flex-direction: column;
     align-items: center;
-
   }
+
 #titolo, #output, .heading {
   font-size: 40px;
 }
